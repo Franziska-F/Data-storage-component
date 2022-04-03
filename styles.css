@@ -56,4 +56,48 @@
   width: 550px;
   height: 153px;
   background-color: hsl(228, 79%, 34%);
+  border-radius: 10px;
+}
+.info-text {
+  width: 450px;
+  color: white;
+  margin: 0 auto;
+}
+.info-text p {
+  margin-top: 35px;
+  margin-bottom: 10px;
+  font-family: "Raleway", sans-serif;
+  opacity: 0.7;
+}
+
+.progress-bar-container {
+  display: block;
+  margin: 0 auto;
+  width: 450px;
+  height: 20px;
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 25px;
+}
+
+.progress-bar-indicator {
+  width: 81.5%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)
+  );
+  border-radius: 25px;
+}
+.gb-display {
+  color: white;
+  width: 450px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  font-family: "Raleway", sans-serif;
+}
+.bold-text {
+  font-weight: 700;
+  opacity: 1;
 }

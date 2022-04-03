@@ -11,6 +11,12 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Red+Hat+Display:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>Frontend Mentor | Fylo data storage component</title>
 
@@ -38,11 +44,20 @@
           /></span>
         </div>
       </div>
+
       <div class="display-bar">
-        <form>
-          <progress max="1000" value="815" id="bar"></progress>
-        </form>
-        You’ve used 815 GB of your storage 185 GB Left 0 GB 1000 GB
+        <div class="info-text">
+          <p>
+            You’ve used <span class="bold-text"> 815 GB</span> of your storage
+          </p>
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-bar-indicator"></div>
+        </div>
+        <div class="gb-display">
+          <span>0 GB</span>
+          <span>1000 GB</span>
+        </div>
       </div>
     </div>
     <div class="attribution">
