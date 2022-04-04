@@ -1,18 +1,20 @@
-/*.background {
+body {
   background-color: #0c122c;
+  min-height: 100vh;
+
   background-image: url(images/bg-desktop.png);
   background-repeat: no-repeat;
-  background-position: center;
-  height: 500px;
-  background-size: cover;
-  margin-top: 400px;
-}*/
+  background-position: bottom;
+}
+
+.main {
+  position: relative;
+  top: 200px;
+}
 .displays {
   display: flex;
   flex-direction: row;
-
-  margin-top: 200px;
-  margin: 200px auto;
+  justify-content: center;
 }
 
 .logo-container {
@@ -21,6 +23,7 @@
   border-radius: 8px 80px 8px 8px;
   width: 325px;
   height: 175px;
+  margin-left: 180px;
 }
 .logo img {
   margin-top: 30px;
@@ -53,41 +56,40 @@
   background-color: hsl(228, 79%, 34%);
   border-radius: 10px;
   position: relative;
-  bottom: -25px;
+  bottom: -22px;
   margin-left: 40px;
 }
-
-.bubble {
-  position: absolute;
-  right: 460px;
-  top: 180px;
-}
+/* Speech bubble  */
 
 .speech-bubble {
-  background-color: cadetblue;
-  width: 167px;
+  background-color: white;
+  width: 169px;
   height: 70px;
   border-radius: 10px;
   position: relative;
-  margin: 0 auto;
-  color: white;
+  right: 215px;
+  bottom: 25px;
+
+  color: black;
   font-family: "Raleway", sans-serif;
 }
 
 .speech-bubble::after {
   content: "";
-  border: 20px solid transparent;
+  border: 30px solid transparent;
   position: absolute;
 }
 .triangle.speech-bubble::after {
-  border-right-color: cadetblue;
+  border-right-color: white;
 
-  bottom: -20px;
-  left: 76%;
+  bottom: -30px;
+  left: 65%;
 }
-.gb-left {
-  display: block;
+/* contend of speech-bubble */
 
+.gb-left {
+  display: flex;
+  justify-content: center;
   padding: 20px 20px;
 }
 .gb-left-number {
@@ -146,4 +148,10 @@
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 800px) {
+  .displays {
+    flex-direction: column;
+  }
 }
