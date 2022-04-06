@@ -74,16 +74,17 @@ body {
   color: rgba(0, 0, 0, 0.5);
   font-family: "Raleway", sans-serif;
 }
+@media (min-width: 770px) {
+  .speech-bubble::after {
+    content: "";
+    border: 30px solid transparent;
+    position: absolute;
 
-.speech-bubble::after {
-  content: "";
-  border: 30px solid transparent;
-  position: absolute;
+    border-right-color: white;
 
-  border-right-color: white;
-
-  bottom: -30px;
-  left: 65%;
+    bottom: -30px;
+    left: 65%;
+  }
 }
 /* contend of speech-bubble */
 
@@ -126,9 +127,10 @@ body {
 
 .progress-bar-indicator {
   width: 81.5%;
+  height: 100%;
   background-image: linear-gradient(
     to right,
-    height: 100%; hsl(6, 100%, 80%),
+    hsl(6, 100%, 80%),
     hsl(335, 100%, 65%)
   );
   border-radius: 25px;
@@ -156,69 +158,50 @@ body {
 }
 
 @media (max-width: 800px) {
+  .main {
+    top: 100px;
+  }
   .displays {
     flex-direction: column;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .logo-container {
-    background-color: hsl(228, 79%, 34%);
-
-    border-radius: 8px 80px 8px 8px;
     width: 325px;
     height: 175px;
-    margin: 20px;
+    margin: 20px auto;
   }
   .display-bar {
     width: 325px;
     height: 153px;
-    background-color: hsl(228, 79%, 34%);
-    border-radius: 10px;
-    position: relative;
-    margin: 0 20px 0 20px;
+
+    margin: 0 auto;
   }
 
   .progress-bar-container {
-    display: block;
-    margin: 0 auto;
     width: 300px;
     height: 20px;
-    background-color: hsl(229, 57%, 11%);
-    border-radius: 25px;
   }
 
-  .progress-bar-indicator {
-    width: 81.5%;
-    height: 100%;
-    background-image: linear-gradient(
-      to right,
-      hsl(6, 100%, 80%),
-      hsl(335, 100%, 65%)
-    );
-    border-radius: 25px;
-  }
   .info-text {
     width: 320px;
-    color: rgba(255, 255, 255, 0.7);
-    margin: 0 auto;
   }
   .info-text p {
-    margin-top: 35px;
-    margin-bottom: 10px;
-    font-family: "Raleway", sans-serif;
-  }
-  .bold-text {
-    font-weight: 700;
-    color: white;
+    text-align: center;
   }
 
   .gb-display {
     color: white;
-    width: 320px;
-    display: flex;
+    width: 300px;
+    margin-top: 5px;
+  }
+  .speech-bubble {
     margin: 0 auto;
-    justify-content: space-between;
-    font-family: "Raleway", sans-serif;
+    right: 0;
+  }
+
+  .attribution {
+    left: 80px;
   }
 }
